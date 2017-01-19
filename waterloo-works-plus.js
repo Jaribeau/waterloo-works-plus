@@ -60,6 +60,8 @@ if ($('h1:contains(Search Results)')[0]){
     //Run script once on load, then again when user clicks any link (except for "Not Interested")
     fixUI();
     $(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function() {
-        setTimeout(fixUI, 200); // Delay while the table content is updated
+        if (!e.shiftKey && !e.ctrlKey && !e.metaKey){
+            setTimeout(fixUI, 350); // Delay while the table content is updated
+        }
     });
 }
