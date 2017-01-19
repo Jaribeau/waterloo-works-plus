@@ -61,6 +61,6 @@ if ($('h1:contains(Search Results)')[0]){
     fixUI();
     $(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function() {
             // TODO: Make this smarter to eliminate race condition
-            setTimeout(fixUI, 400); // Delay while the table content is updated
+            setTimeout(fixUI, 700); // Delay while the table content is updated
     });
 }
