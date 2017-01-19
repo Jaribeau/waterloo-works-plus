@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WaterlooWorks Plus
 // @namespace    http://jareds.site/
-// @version      1.2
+// @version      1.3
 // @description  A little script to patch some of the UI atrocities that exist in WaterlooWorks. Contribute at github.com/Jaribeau/waterloo-works-plus
 // @author       Jared Baribeau
 // @match        https://waterlooworks.uwaterloo.ca/myAccount/co-op/coop-postings.htm
@@ -59,8 +59,10 @@ if ($('h1:contains(Search Results)')[0]){
 
     //Run script once on load, then again when user clicks any link (except for "Not Interested")
     fixUI();
-    $(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function() {
+    $(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function(e) {
+        if (!e.shiftKey && !e.ctrlKey && !e.metaKey){
             // TODO: Make this smarter to eliminate race condition
             setTimeout(fixUI, 700); // Delay while the table content is updated
+        }
     });
 }
