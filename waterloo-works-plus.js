@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WaterlooWorks Plus
 // @namespace    http://jareds.site/
-// @version      1.0
+// @version      1.1
 // @description  A little script to patch some of the UI atrocities that exist in WaterlooWorks. Contribute at github.com/Jaribeau/waterloo-works-plus
 // @author       Jared Baribeau
 // @match        https://waterlooworks.uwaterloo.ca/myAccount/co-op/coop-postings.htm
@@ -61,7 +61,8 @@ if ($('h1:contains(Search Results)')[0]){
     fixUI();
     $(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function() {
         if (!e.shiftKey && !e.ctrlKey && !e.metaKey){
-            setTimeout(fixUI, 350); // Delay while the table content is updated
+            // TODO: Make this smarter to eliminate race condition
+            setTimeout(fixUI, 400); // Delay while the table content is updated
         }
     });
 }
