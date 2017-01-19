@@ -54,11 +54,12 @@ function fixUI() {
 
 };
 
-//Run script once on load, then again when user clicks any link (except for "Not Interested")
-fixUI();
-$(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function() {
-    setTimeout(fixUI, 1000); // Delay while the table content is updated
-});
+//Check if you're actually on the landing page (i.e. haven't searched yet)
+if (!$('strong:contains(QUICK SEARCHES)')[0]){
 
-
-
+    //Run script once on load, then again when user clicks any link (except for "Not Interested")
+    fixUI();
+    $(document).on('click', 'a:not(:has(img[title="Not Interested"]))', function() {
+        setTimeout(fixUI, 200); // Delay while the table content is updated
+    });
+}
