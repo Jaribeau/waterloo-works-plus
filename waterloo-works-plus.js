@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WaterlooWorks Plus
 // @namespace    http://jareds.site/
-// @version      1.1
+// @version      1.2
 // @description  A little script to patch some of the UI atrocities that exist in WaterlooWorks. Contribute at github.com/Jaribeau/waterloo-works-plus
 // @author       Jared Baribeau
 // @match        https://waterlooworks.uwaterloo.ca/myAccount/co-op/coop-postings.htm
