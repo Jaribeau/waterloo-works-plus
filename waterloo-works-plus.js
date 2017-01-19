@@ -54,8 +54,8 @@ function fixUI() {
 
 };
 
-//Check if you're actually on the landing page (i.e. haven't searched yet)
-if (!$('strong:contains(QUICK SEARCHES)')[0]){
+//Make sure you're on the search results page
+if ($('h1:contains(Search Results)')[0]){
 
     //Run script once on load, then again when user clicks any link (except for "Not Interested")
     fixUI();
