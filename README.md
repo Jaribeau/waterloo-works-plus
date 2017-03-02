@@ -27,6 +27,7 @@ This is my last co-op search, so if you're interested in maintaining this longer
 ## Contributors
 
  * [Jaribeau](https://github.com/Jaribeau)
+ * [Peygar](https://github.com/peygar)
  * You?
 
 Contribute at [github.com/Jaribeau/waterloo-works-plus](github.com/Jaribeau/waterloo-works-plus)!
