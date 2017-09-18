@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         WaterlooWorks Plus
 // @namespace    http://jareds.site/
-// @version      1.4
+// @version      1.5
 // @description  A little script to patch some of the UI atrocities that exist in WaterlooWorks. Contribute at github.com/Jaribeau/waterloo-works-plus
 // @author       Jared Baribeau
-// @match        https://waterlooworks.uwaterloo.ca/myAccount/co-op/coop-postings.htm
+// @match        https://waterlooworks.uwaterloo.ca/myAccount/*
 // @grant        none
 // ==/UserScript==
 
@@ -22,11 +22,12 @@ function fixUI() {
     }
 
     // Change text wrap settings for various columns
-    $(function() {
-        $("tbody td").each(function (index, value) {
-            $(this).css('white-space', ['nowrap', 'nowrap', 'nowrap', 'pre-wrap', 'pre-wrap', 'pre-wrap','pre-wrap','pre-wrap','pre-wrap','pre-wrap','','',''][index % 13]); // Where there are 13 columns, and each corresponds
-        });
-    });
+    // TEMPORARILY COMMENTED OUT (NEEDS FIXING)
+    //$(function() {
+    //    $("tbody td").each(function (index, value) {
+    //        $(this).css('white-space', ['nowrap', 'nowrap', 'nowrap', 'pre-wrap', 'pre-wrap', 'pre-wrap','pre-wrap','pre-wrap','pre-wrap','pre-wrap','','',''][index % 13]); // Where there are 13 columns, and each corresponds
+    //    });
+    //});
 
     // Resize "Remove from shortlist" button to match the add button
     $(function() {
